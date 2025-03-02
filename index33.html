@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="p-6 transition-all duration-300">
+    <div class="max-w-6xl mx-auto flex flex-col">
+        <header class="flex justify-between items-center mb-6 py-4 bg-white shadow-md px-6 rounded-lg w-full">
+            <h1 class="text-2xl font-bold text-blue-900 flex items-center gap-2">
+                Dev<span class="font-extrabold">Board</span>
+            </h1>
+            <span id="completed-count" class="text-lg font-semibold text-green-600">Completed: 0</span>
+            <span id="theme-toggle" class="cursor-pointer text-2xl"><img src="./assets/theme-btn.png" alt=""></span> <!-- Background change button -->
+        </header>
+
+        <div class="flex w-full" id="main-content">
+            <div class="w-3/4">
+                <div class="flex justify-between items-center mb-6">
+                    <div class="flex items-center gap-4 bg-white shadow-md px-4 py-2 rounded-lg">
+                        <span class="text-blue-600 font-semibold text-xl"><img src="./assets/checkbox.png" alt=""></span>
+                        <span id="task-count" class="text-lg font-semibold">Task Assigned: 6</span>
+                    </div>
+                    <div class="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-4 rounded-lg flex items-center">
+                        <span class="text-lg font-semibold"><img src="./assets/board.png" alt=""> Discover Something New Today!</span>
+                    </div>
+                    <!-- Current Date Display with Image/Icon -->
+                    <div class="flex items-center gap-2">
+                        <!-- Add an icon or image here -->
+                        <img src="./assets/calender.png" alt="" class="w-6 h-6">
+                        <span id="current-date" class="text-md font-light"></span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="task-container"></div>
+            </div>
+
+            <div class="w-1/4 ml-6 p-6 bg-white shadow-md rounded-lg mt-1">
+                <h2 class="text-lg font-semibold mb-4"><img src="./assets/activity.png" alt=""> Activity Log</h2>
+                <button class="bg-purple-600 text-white px-4 py-2 rounded-md w-full mb-4" id="clear-history">Clear History</button>
+                <div id="activity-log" class="space-y-2 max-h-72 overflow-y-auto"></div>
+            </div>
+        </div>
+
+        <div id="question-content" class="hidden p-6 bg-white rounded-lg shadow-md max-w-4xl mx-auto">
+            <nav class="flex justify-between items-center bg-aqua p-4 rounded-lg shadow-md">
+                <h1 class="text-lg font-bold">Devboard - Q&A</h1>
+                <button id="back-button" class="bg-blue-600 text-white px-4 py-2 rounded-lg transition-all hover:bg-blue-800">Back to Desk</button>
+            </nav>
+
+            <h2 class="text-2xl font-bold mt-6">Blogs</h2>
+
+            <div class="mt-4 space-y-6">
+                <div>
+                    <h3 class="text-lg font-semibold">1. What are the different ways to select an element in the DOM?</h3>
+                    <p class="text-gray-700">The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">2. What is the difference between innerHTML, innerText, and textContent?</h3>
+                    <p class="text-gray-700">textContent returns all text contained by an element and its children for formatting purposes. innerText returns all visible text inside an element. innerHTML returns text along with any HTML tags inside the element.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">3. What is event delegation in the DOM?</h3>
+                    <p class="text-gray-700">Event delegation is a JavaScript technique where a single event listener is attached to a parent element to manage events for multiple child elements.</p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold">4. What is event bubbling in the DOM?</h3>
+                    <p class="text-gray-700">Event bubbling occurs when an event triggered on a child element propagates up through the DOM, activating event handlers on parent elements.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script33.js"></script>
+</body>
+        </html>
